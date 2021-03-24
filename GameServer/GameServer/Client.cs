@@ -177,6 +177,7 @@ namespace GameServer
             public void Connect(IPEndPoint _endPoint)
             {
                 endPoint = _endPoint;
+                ServerSend.UDPTest("This is a test message from the server sent via UDP");
             }
 
             /// <summary>Sends data to the client via UDP.</summary>
@@ -184,6 +185,7 @@ namespace GameServer
             public void SendData(Packet _packet)
             {
                 Server.SendUDPData(endPoint, _packet);
+                
             }
 
             /// <summary>Prepares received data to be used by the appropriate packet handler methods.</summary>

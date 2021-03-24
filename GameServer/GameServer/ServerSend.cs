@@ -86,6 +86,16 @@ namespace GameServer
                 _packet.Write(_toClient);
 
                 SendTCPData(_toClient, _packet);
+                
+            }
+        }
+
+        public static void UDPTest(string _msg)
+        {
+            using (Packet _packet = new Packet((int)ServerPackets.udpTest))
+            {
+                _packet.Write(_msg);
+                SendUDPDataToAll(_packet);
             }
         }
 

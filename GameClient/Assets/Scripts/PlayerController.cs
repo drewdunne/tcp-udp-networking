@@ -6,19 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public Transform camTransform;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            ClientSend.PlayerShoot(camTransform.forward);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            ClientSend.PlayerThrowItem(camTransform.forward);
-        }
-    }
-
+   
     private void FixedUpdate()
     {
         SendInputToServer();

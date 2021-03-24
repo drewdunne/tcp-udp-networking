@@ -130,6 +130,8 @@ namespace GameServer
             {
                 { (int)ClientPackets.welcomeReceived, ServerHandle.WelcomeReceived },
                 { (int)ClientPackets.playerMovement, ServerHandle.PlayerMovement },
+                { (int)ClientPackets.udpTestConfirmationMessage, ServerHandle.UDPTestConfirmationMessageReceived },
+
             };
             Console.WriteLine("Initialized packets.");
         }

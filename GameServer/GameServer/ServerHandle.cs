@@ -31,5 +31,12 @@ namespace GameServer
 
             Server.clients[_fromClient].player.SetInput(_inputs, _rotation);
         }
+
+        public static void UDPTestConfirmationMessageReceived(int _fromtClient, Packet _packet)
+        {
+            string _msg = _packet.ReadString();
+
+            Console.WriteLine(_msg);
+        }
     }
 }

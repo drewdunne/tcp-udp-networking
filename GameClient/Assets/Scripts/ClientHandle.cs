@@ -153,4 +153,12 @@ public class ClientHandle : MonoBehaviour
 
         GameManager.enemies[_enemyId].SetHealth(_health);
     }
+
+    public static void UDPTestReceived(Packet _packet)
+    {
+        string msg = _packet.ReadString();
+        Debug.Log(msg);
+
+        ClientSend.UDPTestConfirmationMessage();
+    }
 }
